@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "main": {
+      "type": "collection-template",
+      "settings": {
+        "layout": "grid",
+        "grid": 4,
+        "rows": 2,
+        "show_collection_image": true,
+        "show_vendor": false,
+        "sort_enable": true,
+        "tags_enable": true
+      }
+    },
+    "16488141451c6b5c9b": {
+      "type": "featured-blog",
+      "settings": {
+        "title": "Blog posts",
+        "blog": "news",
+        "post_limit": 3,
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_view_all": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16488141451c6b5c9b"
+  ]
+}
