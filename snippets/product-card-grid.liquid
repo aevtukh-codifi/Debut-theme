@@ -32,14 +32,16 @@
               data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
               data-aspectratio="{{ preview_image.aspect_ratio }}"
               loading="lazy"
-              data-image>
+              data-image
+              height="{{ img.height }}" 
+              width="{{ img.width }}">
       </div>
     </div>
   </div>
 
   <noscript>
     {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
-    <img class="grid-view-item__image" src="{{ preview_image | img_url: image_size, scale: 2 }}" alt="{{ preview_image.alt }}" loading="lazy" style="max-width: {{ max_height | times: preview_image.aspect_ratio }}px;">
+    <img class="grid-view-item__image" src="{{ preview_image | img_url: image_size, scale: 2 }}" alt="{{ preview_image.alt }}" loading="lazy" style="max-width: {{ max_height | times: preview_image.aspect_ratio }}px;" height="{{ img.height }}" width="{{ img.width }}">
   </noscript>
 
   <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">{{ product.title }}</div>

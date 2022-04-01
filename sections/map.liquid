@@ -1,6 +1,8 @@
-{%- assign display_map = false -%}
-{%- assign onboarding = false -%}
-{%- assign bg_image = section.settings.background_image -%}
+{% liquid
+  assign display_map = false
+  assign onboarding = false 
+  assign bg_image = section.settings.background_image 
+%}
 
 {%- if section.settings.api_key == blank and bg_image == blank -%}
   {%- assign onboarding = true -%}
