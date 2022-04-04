@@ -28,7 +28,7 @@
 <div class="giftcard-wrapper">
   <main class="giftcard" role="main">
     <div class="giftcard__wrap">
-      <img src="{{ 'gift-card/card.jpg' | shopify_asset_url }}" alt="" loading="lazy" height="" width="">
+      <img src="{{ 'gift-card/card.jpg' | shopify_asset_url }}" alt="">
 
       {%- assign initial_value_size = formatted_initial_value | size -%}
       <div class="h1 giftcard__amount{% if initial_value_size > 6 %} giftcard__amount--medium{% endif %}">
@@ -67,7 +67,7 @@
           rel="noopener"
           aria-describedby="a11y-new-window-message">
             {{ 'gift_cards.issued.shop_link' | t }}
-            {% render 'icon-arrow-right' %}
+            {% include 'icon-arrow-right' %}
         </a>
       </li>
       <li>
@@ -78,7 +78,7 @@
       {% if gift_card.pass_url %}
         <li>
           <a class="giftcard__apple-wallet" href="{{ gift_card.pass_url }}">
-            <img class="giftcard__apple-wallet-image" src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" loading="lazy" width="120" height="40" alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}">
+            <img class="giftcard__apple-wallet-image" src="{{ 'gift-card/add-to-apple-wallet.svg' | shopify_asset_url }}" width="120" height="40" alt="{{ 'gift_cards.issued.add_to_apple_wallet' | t }}">
           </a>
         </li>
       {% endif %}

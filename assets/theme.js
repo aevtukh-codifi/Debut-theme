@@ -9623,7 +9623,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    if (image.hasAttribute('imageset')) {
+    if (image.hasAttribute('data-bgset')) {
       var innerImage = image.querySelector(selectors.lazyloaded);
 
       if (innerImage) {
